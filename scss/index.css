@@ -39,21 +39,21 @@ button {
 /* Fonts */
 @font-face {
   font-family: Stolzl;
-  src: url("/fonts/Stolzl-Book.woff2") format("woff2"), url("/fonts/Stolzl-Book.woff2") format("woff");
+  src: url("../fonts/Stolzl-Book.woff2") format("woff2"), url("../fonts/Stolzl-Book.woff2") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Stolzl;
-  src: url("/fonts/Stolzl-Regular.woff2") format("woff2"), url("/fonts/Stolzl-Regular.woff2") format("woff");
+  src: url("../fonts/Stolzl-Regular.woff2") format("woff2"), url("../fonts/Stolzl-Regular.woff2") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Stolzl;
-  src: url("/fonts/Stolzl-Medium.woff2") format("woff2"), url("/fonts/Stolzl-Medium.woff2") format("woff");
+  src: url("../fonts/Stolzl-Medium.woff2") format("woff2"), url("../fonts/Stolzl-Medium.woff2") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -109,21 +109,21 @@ body {
 /* Fonts */
 @font-face {
   font-family: Stolzl;
-  src: url("/fonts/Stolzl-Book.woff2") format("woff2"), url("/fonts/Stolzl-Book.woff2") format("woff");
+  src: url("../fonts/Stolzl-Book.woff2") format("woff2"), url("../fonts/Stolzl-Book.woff2") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Stolzl;
-  src: url("/fonts/Stolzl-Regular.woff2") format("woff2"), url("/fonts/Stolzl-Regular.woff2") format("woff");
+  src: url("../fonts/Stolzl-Regular.woff2") format("woff2"), url("../fonts/Stolzl-Regular.woff2") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Stolzl;
-  src: url("/fonts/Stolzl-Medium.woff2") format("woff2"), url("/fonts/Stolzl-Medium.woff2") format("woff");
+  src: url("../fonts/Stolzl-Medium.woff2") format("woff2"), url("../fonts/Stolzl-Medium.woff2") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
