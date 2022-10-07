@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monvalise - Catalog</title>
+    <!-- JQuery -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./scss/index.css">
+</head>
+<body class="d-flex flex-column h-100">
+<!-- Notification -->
+<div class="notification d-flex align-items-center justify-content-center">
+    <img width="80" height="40" src="./images/notification.png" alt="смайли">
+    <span>Брендовий верхній одяг від 899 грн</span>
+</div>
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="header-body d-flex flex-column">
+            <div class="header-top col-12 d-flex align-items-center justify-content-between">
+                <a class="header-logo" href="#">
+                    <img width="151" height="23" src="./images/logo.svg" alt="логотип компанії">
+                </a>
+                <div class="header-burger">
+                    <span></span>
+                </div>
+                <div class="header-functional-part d-flex align-items-center">
+                    <form class="d-flex justify-content-between" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Знайти речі або бренди"
+                               aria-label="Search">
+                        <svg class="from-icon">
+                            <use href="/images/sprite.svg#search"></use>
+                        </svg>
+                        <button class="btn btn-outline-success" type="submit">Додати товар</button>
+                    </form>
+                    <div class="dropdown header-languages">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Укр
+                            <span>
+                                <svg class="dropdown-icon">
+                                    <use href="/images/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <button class="dropdown-item" type="button">English</button>
+                            </li>
+                            <li class="active">
+                                <button class="dropdown-item" type="button">Укр</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="header-icons-list d-flex align-items-center">
+                        <li class="header-icons-item">
+                            <svg class="header-icon">
+                                <use href="/images/sprite.svg#favorites"></use>
+                            </svg>
+                            <span>8</span>
+                        </li>
+                        <li class="header-icons-item">
+                            <svg class="header-icon">
+                                <use href="/images/sprite.svg#message"></use>
+                            </svg>
+                            <span>8</span>
+                        </li>
+                        <li class="header-icons-item">
+                            <svg class="header-icon">
+                                <use href="/images/sprite.svg#cart"></use>
+                            </svg>
+                            <span>8</span>
+                        </li>
+                    </ul>
+                    <div class="dropdown header-account">
+                        <button class="btn btn-secondary dropdown-toggle d-flex align-items-center" type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            <span class="account-img">
+                                <img src="./images/profile-img.jpg" alt="фотографія профілю">
+                            </span>
+                            <span>
+                                <svg class="dropdown-icon">
+                                    <use href="/images/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <button class="dropdown-item" type="button">Налаштування</button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item" type="button">Вийти з аккаунту</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <nav class="header-menu">
+                <ul class="header-menu-list d-flex">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Головна</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Жінкам</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Чоловікам</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Дитячі речі</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Аукціон</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Бренди</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Акції</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Аутентифікація</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Блог</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<!-- Main -->
+<main>
+    <div class="container">
+        <section aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Library</li>
+            </ol>
+        </section>
+        <section class="catalogue">
+            <h1 class="title">Каталог одягу</h1>
+            <div class="catalogue-title-section d-flex align-items-center justify-content-between">
+                <h2 class="filter-title">Фільтри</h2>
+                <div class="sorting-block d-flex align-items-center">
+                    <span>Сортувати за:</span>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary btn-text">За замовчуванням</button>
+                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                                data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                            <span>
+                                <svg class="dropdown-icon">
+                                    <use href="/images/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="catalogue-main d-flex justify-content-between">
+                <div class="section-filters">
+                    <div class="accordion d-flex flex-column" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseTwo">
+                                    Ціна
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+                                 aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="accordion-body d-flex flex-column">
+                                    <div id="slider-range"></div>
+                                    <div class="range-values d-flex justify-content-between">
+                                        <div class="range-first d-flex flex-column">
+                                            <span>Від</span>
+                                            <input type="text" id="min" readonly>
+                                        </div>
+                                        <div class="range-second d-flex flex-column">
+                                            <span>До</span>
+                                            <input type="text" id="max" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseTwo">
+                                    Стать
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                 aria-labelledby="panelsStayOpen-headingTwo">
+                                <div class="accordion-body">
+                                    <div class="checkbox-container d-flex flex-column">
+                                        <div class="form-check d-flex justify-content-between align-items-center">
+                                            <div class="check-main d-flex align-items-center">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                       id="categoryWomen">
+                                                <label class="form-check-label" for="categoryWomen">
+                                                    Жінкам
+                                                </label>
+                                            </div>
+                                            <span>(64)</span>
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between align-items-center">
+                                            <div class="check-main d-flex align-items-center">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                       id="categoryMan">
+                                                <label class="form-check-label" for="categoryMan">
+                                                    Чоловікам
+                                                </label>
+                                            </div>
+                                            <span>(25)</span>
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between align-items-center">
+                                            <div class="check-main d-flex align-items-center">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                       id="categoryChild">
+                                                <label class="form-check-label" for="categoryChild">
+                                                    Діти
+                                                </label>
+                                            </div>
+                                            <span>(22)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseThree">
+                                    Бренд
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                 aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body">
+                                    <div class="checkbox-container d-flex flex-column">
+                                        <div class="form-check d-flex justify-content-between align-items-center">
+                                            <div class="check-main d-flex align-items-center">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                       id="lv">
+                                                <label class="form-check-label" for="lv">
+                                                    Louis Vuitton
+                                                </label>
+                                            </div>
+                                            <span>(64)</span>
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between align-items-center">
+                                            <div class="check-main d-flex align-items-center">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                       id="tb">
+                                                <label class="form-check-label" for="tb">
+                                                    Thom Browne
+                                                </label>
+                                            </div>
+                                            <span>(25)</span>
+                                        </div>
+                                        <div class="form-check d-flex justify-content-between align-items-center">
+                                            <div class="check-main d-flex align-items-center">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                       id="canali">
+                                                <label class="form-check-label" for="canali">
+                                                    Canali
+                                                </label>
+                                            </div>
+                                            <span>(22)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-products d-flex flex-column">
+                    <ul class="products-list d-flex justify-content-between flex-wrap">
+                        <li class="products-item">
+                            <div class="card d-flex align-items-center">
+                                <svg class="favorite-icon">
+                                    <use href="/images/sprite.svg#favorites"></use>
+                                </svg>
+                                <div class="card-img d-flex align-items-center justify-content-center">
+                                    <img width="207" height="263" src="./images/products/card-img-1.png"
+                                         class="card-img-top"
+                                         alt="Джинси">
+                                    <span class="promotion">топ</span>
+                                </div>
+                                <div class="card-body">
+                                    <span class="card-subtitle">LOUIS VUITTON</span>
+                                    <h5 title="Темно-сині джинси Louis Vuitton" class="card-title">Темно-сині джинси
+                                        Louis Vuitton</h5>
+                                    <div class="card-bottom d-flex align-items-center justify-content-between">
+                                        <div class="card-price d-flex flex-column">
+                                            <s>5 499</s>
+                                            <span>3 799</span>
+                                        </div>
+                                        <div class="card-bottom-right">
+                                            <div class="card-location d-flex align-items-center">
+                                                <svg class="card-icon">
+                                                    <use href="/images/sprite.svg#location"></use>
+                                                </svg>
+                                                <span>Херсон</span>
+                                            </div>
+                                            <div class="card-profile d-flex align-items-center">
+                                                <div class="card-profile-img"></div>
+                                                <span>Sell_For_Men</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="products-item">
+                            <div class="card d-flex align-items-center">
+                                <svg class="favorite-icon">
+                                    <use href="/images/sprite.svg#favorites"></use>
+                                </svg>
+                                <div class="card-img d-flex align-items-center justify-content-center">
+                                    <img width="207" height="263" src="./images/products/card-img-2.png"
+                                         class="card-img-top"
+                                         alt="Джинси">
+                                    <span class="promotion">топ</span>
+                                </div>
+                                <div class="card-body">
+                                    <span class="card-subtitle">THOM BROWNE</span>
+                                    <h5 title="Чорний піджак Thom Browne" class="card-title">Чорний піджак Thom Browne</h5>
+                                    <div class="card-bottom d-flex align-items-center justify-content-between">
+                                        <div class="card-price d-flex flex-column">
+                                            <s>5 499</s>
+                                            <span>8 599</span>
+                                        </div>
+                                        <div class="card-bottom-right">
+                                            <div class="card-location d-flex align-items-center">
+                                                <svg class="card-icon">
+                                                    <use href="/images/sprite.svg#location"></use>
+                                                </svg>
+                                                <span>Хмельницький</span>
+                                            </div>
+                                            <div class="card-profile d-flex align-items-center">
+                                                <div class="card-profile-img"></div>
+                                                <span>Sell_For_Men</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="products-item">
+                            <div class="card d-flex align-items-center">
+                                <svg class="favorite-icon">
+                                    <use href="/images/sprite.svg#favorites"></use>
+                                </svg>
+                                <div class="card-img d-flex align-items-center justify-content-center">
+                                    <img width="207" height="263" src="./images/products/card-img-3.png"
+                                         class="card-img-top"
+                                         alt="Джинси">
+                                    <span class="promotion">топ</span>
+                                </div>
+                                <div class="card-body">
+                                    <span class="card-subtitle">CANALI</span>
+                                    <h5 title="Темно-сині джинси Louis Vuitton" class="card-title">Вовняний піджак Canali</h5>
+                                    <div class="card-bottom d-flex align-items-center justify-content-between">
+                                        <div class="card-price d-flex flex-column">
+                                            <s>5 499</s>
+                                            <span>2 599</span>
+                                        </div>
+                                        <div class="card-bottom-right">
+                                            <div class="card-location d-flex align-items-center">
+                                                <svg class="card-icon">
+                                                    <use href="/images/sprite.svg#location"></use>
+                                                </svg>
+                                                <span>Херсон</span>
+                                            </div>
+                                            <div class="card-profile d-flex align-items-center">
+                                                <div class="card-profile-img"></div>
+                                                <span>Sell_For_Men</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="products-item">
+                            <div class="card d-flex align-items-center">
+                                <svg class="favorite-icon">
+                                    <use href="/images/sprite.svg#favorites"></use>
+                                </svg>
+                                <div class="card-img d-flex align-items-center justify-content-center">
+                                    <img width="207" height="263" src="./images/products/card-img-4.png"
+                                         class="card-img-top"
+                                         alt="Джинси">
+                                    <span class="promotion">топ</span>
+                                </div>
+                                <div class="card-body">
+                                    <span class="card-subtitle">LOUIS VUITTON</span>
+                                    <h5 title="Темно-сині джинси Louis Vuitton" class="card-title">Темно-сині джинси
+                                        Louis Vuitton</h5>
+                                    <div class="card-bottom d-flex align-items-center justify-content-between">
+                                        <div class="card-price d-flex flex-column">
+                                            <s>5 499</s>
+                                            <span>3 799</span>
+                                        </div>
+                                        <div class="card-bottom-right">
+                                            <div class="card-location d-flex align-items-center">
+                                                <svg class="card-icon">
+                                                    <use href="/images/sprite.svg#location"></use>
+                                                </svg>
+                                                <span>Херсон</span>
+                                            </div>
+                                            <div class="card-profile d-flex align-items-center">
+                                                <div class="card-profile-img"></div>
+                                                <span>Sell_For_Men</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="products-item">
+                            <div class="card d-flex align-items-center">
+                                <svg class="favorite-icon">
+                                    <use href="/images/sprite.svg#favorites"></use>
+                                </svg>
+                                <div class="card-img d-flex align-items-center justify-content-center">
+                                    <img width="207" height="263" src="./images/products/card-img-5.png"
+                                         class="card-img-top"
+                                         alt="Джинси">
+                                </div>
+                                <div class="card-body">
+                                    <span class="card-subtitle">LOUIS VUITTON</span>
+                                    <h5 title="Темно-сині джинси Louis Vuitton" class="card-title">Темно-сині джинси
+                                        Louis Vuitton</h5>
+                                    <div class="card-bottom d-flex align-items-center justify-content-between">
+                                        <div class="card-price d-flex flex-column">
+                                            <s>5 499</s>
+                                            <span>3 799</span>
+                                        </div>
+                                        <div class="card-bottom-right">
+                                            <div class="card-location d-flex align-items-center">
+                                                <svg class="card-icon">
+                                                    <use href="/images/sprite.svg#location"></use>
+                                                </svg>
+                                                <span>Херсон</span>
+                                            </div>
+                                            <div class="card-profile d-flex align-items-center">
+                                                <div class="card-profile-img"></div>
+                                                <span>Sell_For_Men</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="products-item">
+                            <div class="card d-flex align-items-center">
+                                <svg class="favorite-icon">
+                                    <use href="/images/sprite.svg#favorites"></use>
+                                </svg>
+                                <div class="card-img d-flex align-items-center justify-content-center">
+                                    <img width="207" height="263" src="./images/products/card-img-6.png"
+                                         class="card-img-top"
+                                         alt="Джинси">
+                                </div>
+                                <div class="card-body">
+                                    <span class="card-subtitle">LOUIS VUITTON</span>
+                                    <h5 title="Темно-сині джинси Louis Vuitton" class="card-title">Темно-сині джинси
+                                        Louis Vuitton</h5>
+                                    <div class="card-bottom d-flex align-items-center justify-content-between">
+                                        <div class="card-price d-flex flex-column">
+                                            <s>5 499</s>
+                                            <span>3 799</span>
+                                        </div>
+                                        <div class="card-bottom-right">
+                                            <div class="card-location d-flex align-items-center">
+                                                <svg class="card-icon">
+                                                    <use href="/images/sprite.svg#location"></use>
+                                                </svg>
+                                                <span>Херсон</span>
+                                            </div>
+                                            <div class="card-profile d-flex align-items-center">
+                                                <div class="card-profile-img"></div>
+                                                <span>Sell_For_Men</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="products-item">
+                            <div class="card"></div>
+                        </li>
+                    </ul>
+                    <ul class="pagination d-flex align-items-center justify-content-center">
+                        <li class="page-item"><a class="page-link pagination-prev" href="#">Попередня</a></li>
+                        <li class="page-item">
+                            <a class="page-link d-flex justify-content-center align-items-center"
+                               href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link d-flex justify-content-center align-items-center"
+                               href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link d-flex justify-content-center align-items-center"
+                               href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link d-flex justify-content-center align-items-center"
+                               href="#">4</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link d-flex justify-content-center align-items-center"
+                               href="#">5</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link d-flex justify-content-center align-items-center"
+                               href="#">6</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link d-flex justify-content-center align-items-center"
+                               href="#">7</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link d-flex justify-content-center align-items-center"
+                               href="#">8</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link d-flex pagination-next" href="#">Наступна</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-container d-flex">
+            <ul class="footer-list d-flex flex-column">
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Довідка для покупців</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Отримати підтримку</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Як купувати</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Як залишити корисний відгук</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Програма Захисту Покупців</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Рекомендації з безпечних покупок</a>
+                </li>
+            </ul>
+            <ul class="footer-list d-flex flex-column">
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Довідка для продавців</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Як почати продавати</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Тарифи</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Угода користувача</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Політика конфіденційності</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Правила користування порталом</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Бонусна програма</a>
+                </li>
+            </ul>
+            <ul class="footer-list d-flex flex-column">
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Про нас</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Довідка та FAQ</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Захист легальності контенту</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Адміністрація</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Вакансії</a>
+                </li>
+            </ul>
+            <div class="footer-mobile-block">
+                <span>Мобільний додаток</span>
+                <a href="#">
+                    <img width="74" src="./images/google-play.png" alt="mobile app">
+                </a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <span>© 2022 Monvalise</span>
+        </div>
+    </div>
+</footer>
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>

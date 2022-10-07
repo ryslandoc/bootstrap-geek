@@ -1,0 +1,34 @@
+/* Colors */
+$white: #fff;
+$black: #000;
+$main-color: #2D3132;
+$sub-color: #747778;
+$notification-bg: #CBDCFF;
+$decoration-main: #EFF1F1;
+$decoration-sub: #444748;
+$border-color: #E0E3E3;
+
+/* Fonts */
+@font-face {
+  font-family: Stolzl;
+  src: url("/fonts/Stolzl-Book.woff2") format("woff2"), url("/fonts/Stolzl-Book.woff2") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Stolzl;
+  src: url("/fonts/Stolzl-Regular.woff2") format("woff2"), url("/fonts/Stolzl-Regular.woff2") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Stolzl;
+  src: url("/fonts/Stolzl-Medium.woff2") format("woff2"), url("/fonts/Stolzl-Medium.woff2") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,49 @@
+@import "vars";
+
+body {
+  font-family: Stolzl, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Container styles */
+.container {
+  max-width: 1290px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
+}
+
+/* Breadcrumb styles */
+.breadcrumb {
+  padding-bottom: 32px;
+
+  .breadcrumb-item {
+    font-size: 12px;
+    line-height: 18px;
+
+    a {
+      color: #2D3132;
+    }
+
+    &.active {
+      color: #747778;
+    }
+  }
+}
+
+/* Title styles */
+.title {
+  font-size: 28px;
+  line-height: 42px;
+  color: #2D3132;
+  padding-bottom: 32px;
+}
+
+.dropdown-toggle:after {
+  display: none;
+}
