@@ -595,6 +595,7 @@ main {
   content: "";
   border: unset;
   background-size: 100%;
+  background-repeat: no-repeat;
   background-image: url("../images/checkbox-icon.svg");
 }
 .catalogue .catalogue-main .section-filters .accordion .accordion-item .checkbox-container .form-check .check-main .form-check-label {
@@ -615,6 +616,11 @@ main {
 .catalogue .catalogue-main .section-products .products-list {
   flex-wrap: wrap;
   gap: 1.395vw;
+}
+@media (max-width: 1024px) {
+  .catalogue .catalogue-main .section-products .products-list {
+    gap: 1.953vw;
+  }
 }
 @media (max-width: 540px) {
   .catalogue .catalogue-main .section-products .products-list {

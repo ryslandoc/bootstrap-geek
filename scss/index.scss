@@ -507,6 +507,7 @@ main {
                   content: '';
                   border: unset;
                   background-size: 100%;
+                  background-repeat: no-repeat;
                   background-image: url('../images/checkbox-icon.svg');
                 }
 
@@ -534,6 +535,9 @@ main {
       .products-list {
         flex-wrap: wrap;
         gap: 1.395vw;
+        @media (max-width: 1024px) {
+          gap: 1.953vw;
+        }
         @media (max-width: 540px) {
           gap: 20px;
         }
